@@ -56,8 +56,7 @@ public class MandelbrotActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         switch (item.getItemId()) {
             case android.R.id.home:
-                Intent upIntent = NavUtils.getParentActivityIntent(this);
-                NavUtils.navigateUpTo(this, upIntent);
+                onBackPressed();
                 break;
 
             case R.id.action_settings:

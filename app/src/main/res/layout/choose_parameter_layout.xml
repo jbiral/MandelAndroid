@@ -6,6 +6,7 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
+        android:id="@+id/title_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -62,7 +63,20 @@
             android:layerType="software"
             android:src="@drawable/dotted_line"/>
 
-
     </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_container"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btn_draw_mandelbrot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Draw the Mandelbrot set!"/>
+
+    </LinearLayout>
 
 </RelativeLayout>

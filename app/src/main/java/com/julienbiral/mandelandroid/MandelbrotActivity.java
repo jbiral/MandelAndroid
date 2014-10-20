@@ -1,11 +1,9 @@
 package com.julienbiral.mandelandroid;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -86,7 +84,7 @@ public class MandelbrotActivity extends ActionBarActivity {
                 mBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
                 double zx, zy, cX, cY, tmp;
                 int previousPercent = 0;
-                int currentPercent = 0;
+                int currentPercent;
                 int nbIter = width * height;
                 int[] pixels = new int[nbIter];
 

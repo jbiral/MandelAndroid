@@ -2,7 +2,17 @@
 <resources>
 
     <string name="app_name">MandelAndroid</string>
-    <string name="loading_screen">Please wait while the Mandelbrot set is being drawn...</string>
     <string name="action_settings">Settings</string>
+
+    <!-- ChooseParametersActivity -->
+    <string name="app_subtitle">Mandelbrot Set Generator</string>
+    <string name="app_instructions">Instructions:</string>
+    <string name="app_instructions_text">This App is simple as a Mandelbrot set is nice! Select some parameters below and click on Generate to create an amazing Mandelbrot set!</string>
+    <string name="button_draw_mandelbrot">Draw the Mandelbrot set!</string>
+
+    <!-- Mandelbrot Drawing -->
+    <string name="loading_screen">Please wait while the Mandelbrot set is being drawn&#8230;</string>
+    <string name="iv_mandelbrot_desc">Mandelbrot Set</string>
+
 
 </resources>

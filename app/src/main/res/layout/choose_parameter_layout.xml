@@ -65,12 +65,65 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/title_container"
+        android:orientation="vertical"
         android:gravity="center_horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                style="@style/NormalListText"
+                android:text="Set the Zoom of the figure" />
+
+            <EditText
+                android:layout_width="60dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:inputType="number"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/dotted_line"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                style="@style/NormalListText"
+                android:text="Choose a magic color" />
+
+            <EditText
+                android:layout_width="60dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:inputType="number"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/dotted_line"/>
+
 
         <Button
             android:id="@+id/btn_draw_mandelbrot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
             android:text="@string/button_draw_mandelbrot" />
 
     </LinearLayout>

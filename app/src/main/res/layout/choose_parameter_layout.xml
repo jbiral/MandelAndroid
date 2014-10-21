@@ -88,12 +88,15 @@
                 android:text="Set the Zoom of the figure" />
 
             <EditText
+
                 android:id="@+id/et_zoom"
                 android:layout_width="60dp"
                 android:layout_marginRight="25dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
+                android:text="250"
+                android:gravity="center_horizontal"
                 android:inputType="number"/>
 
         </RelativeLayout>
@@ -122,6 +125,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
+                android:text="4"
+                android:gravity="center_horizontal"
                 android:inputType="number"/>
 
         </RelativeLayout>

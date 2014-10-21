@@ -87,6 +87,7 @@ public class MandelbrotActivity extends ActionBarActivity {
 
             final double ZOOM = params.zoom;
             final int MAX_ITER = 570;
+            final int MAGIC_COLOR = params.color;
             Bitmap mBitmap = null;
 
             if (mBitmap == null) {
@@ -117,7 +118,7 @@ public class MandelbrotActivity extends ActionBarActivity {
                             iter--;
                         }
 
-                        pixels[(y * width + x)] = Color.rgb(30, iter << 8, 30);
+                        pixels[(y * width + x)] = Color.rgb(30, iter << MAGIC_COLOR, 30);
 
                         currentPercent = (y * width + x) * 100 / nbIter;
                         if (previousPercent < currentPercent) {

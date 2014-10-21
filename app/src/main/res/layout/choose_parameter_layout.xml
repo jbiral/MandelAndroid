@@ -52,13 +52,6 @@
             android:paddingBottom="2dp"
             android:text="@string/app_instructions_text" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_below="@id/tv_instructions_text"
-            android:layerType="software"
-            android:src="@drawable/dotted_line" />
-
     </RelativeLayout>
 
     <LinearLayout
@@ -68,29 +61,21 @@
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp">
-
-            <TextView
-                style="@style/NormalListText"
-                android:text="Set the Zoom of the figure" />
-
-            <EditText
-                android:layout_width="60dp"
-                android:layout_marginRight="20dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:inputType="number"/>
-
-        </RelativeLayout>
+        <TextView
+            style="@style/SmallTitle"
+            android:layout_gravity="left"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text="Parameters:" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:layerType="software"
             android:src="@drawable/dotted_line"/>
 
         <RelativeLayout
@@ -99,11 +84,13 @@
 
             <TextView
                 style="@style/NormalListText"
-                android:text="Choose a magic color" />
+                android:layout_marginLeft="5dp"
+                android:text="Set the Zoom of the figure" />
 
             <EditText
+                android:id="@+id/et_zoom"
                 android:layout_width="60dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="25dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
@@ -116,6 +103,35 @@
             android:layout_height="2dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:layerType="software"
+            android:src="@drawable/dotted_line"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                style="@style/NormalListText"
+                android:layout_marginLeft="5dp"
+                android:text="Choose a magic color" />
+
+            <EditText
+                android:id="@+id/et_magic_color"
+                android:layout_width="60dp"
+                android:layout_marginRight="25dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:inputType="number"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layerType="software"
             android:src="@drawable/dotted_line"/>
 
 

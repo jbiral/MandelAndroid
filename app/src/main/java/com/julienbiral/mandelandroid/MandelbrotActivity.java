@@ -1,5 +1,6 @@
 package com.julienbiral.mandelandroid;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.AsyncTask;
@@ -13,12 +14,19 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.julienbiral.mandelandroid.util.DrawingParameters;
+import com.julienbiral.mandelandroid.util.JsonParser;
+
 
 public class MandelbrotActivity extends ActionBarActivity {
+
+    public final static String DRAWING_PARAMETERS = "_DRAWING_PARAMETERS_";
 
     TextView tvLoadingScreen;
     ProgressBar pbLoadingScreen;
     ImageView ivMandelbrot;
+
+    DrawingParameters params;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +37,9 @@ public class MandelbrotActivity extends ActionBarActivity {
         tvLoadingScreen = (TextView) findViewById(R.id.tv_loading_screen);
         pbLoadingScreen = (ProgressBar) findViewById(R.id.pb_loading_screen);
         ivMandelbrot = (ImageView) findViewById(R.id.iv_mandelbrot);
+
+        String json = getIntent().getStringExtra(DRAWING_PARAMETERS);
+        params = JsonParser.getParams(json);
     }
 
     @Override
@@ -74,7 +85,7 @@ public class MandelbrotActivity extends ActionBarActivity {
         @Override
         protected Bitmap doInBackground(Void... voids) {
 
-            final double ZOOM = 300;
+            final double ZOOM = params.zoom;
             final int MAX_ITER = 570;
             Bitmap mBitmap = null;
 
@@ -112,7 +123,6 @@ public class MandelbrotActivity extends ActionBarActivity {
                         if (previousPercent < currentPercent) {
                             previousPercent = currentPercent;
                             publishProgress(currentPercent);
-                            Log.d("Progression", currentPercent + " percents.");
                         }
                     }
                 }

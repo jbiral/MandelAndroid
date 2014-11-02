@@ -35,11 +35,25 @@
         <item name="android:textSize">15sp</item>
     </style>
 
-    <style name="VerticalLineSeparator">
+    <style name="VerticalDottedLineSeparator">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/line_separator_height</item>
         <item name="android:layerType">software</item>
         <item name="android:src">@drawable/dotted_line</item>
+    </style>
+
+    <style name="VerticalSolidLineSeparator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/line_separator_height</item>
+        <item name="android:layerType">software</item>
+        <item name="android:src">@drawable/solid_line</item>
+    </style>
+
+    <style name="ParameterColoredSeekBar">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/parameter_color_min_seekbar_margin_left</item>
+        <item name="android:layout_weight">1</item>
     </style>
 
 </resources>

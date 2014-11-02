@@ -2,4 +2,10 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Title screen and parameters -->
+    <dimen name="title_block_padding">20dp</dimen>
+    <dimen name="parameters_list_margin_left_right">20dp</dimen>
+    <dimen name="line_separator_height">2dp</dimen>
+    <dimen name="parameter_block_height">60dp</dimen>
 </resources>

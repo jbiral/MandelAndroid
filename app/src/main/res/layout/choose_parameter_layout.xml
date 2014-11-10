@@ -53,138 +53,141 @@
 
     </RelativeLayout>
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/title_container"
-        android:requiresFadingEdge="vertical" >
+        android:layout_marginLeft="@dimen/parameters_list_margin_left_right"
+        android:layout_marginRight="@dimen/parameters_list_margin_left_right"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
 
-        <LinearLayout
+        <TextView
+            style="@style/SmallTitle"
+            android:layout_gravity="left"
+            android:textSize="18sp"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text="Parameters:" />
+
+        <ImageView style="@style/HorizontalSolidLineSeparator" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/parameter_block_height">
+
+            <TextView
+                style="@style/NormalListText"
+                android:text="Set the Zoom of the figure" />
+
+            <EditText
+                android:id="@+id/et_zoom"
+                android:layout_width="@dimen/parameter_edit_text_width"
+                android:layout_marginRight="@dimen/parameter_list_item_margin_right"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/default_zoom_parameter"
+                android:gravity="center_horizontal"
+                android:inputType="number"/>
+
+        </RelativeLayout>
+
+        <ImageView style="@style/HorizontalDottedLineSeparator" />
+
+        <TextView
+            style="@style/SmallTitle"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:textSize="18sp"
+            android:gravity="bottom|center"
+            android:text="@string/color_title_parameter" />
+
+        <ImageView style="@style/HorizontalSolidLineSeparator" />
+
+        <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/parameters_list_margin_left_right"
-            android:layout_marginRight="@dimen/parameters_list_margin_left_right"
-            android:gravity="center_horizontal"
-            android:orientation="vertical" >
+            android:orientation="horizontal">
 
-            <TextView
-                style="@style/SmallTitle"
-                android:layout_gravity="left"
-                android:textSize="18sp"
-                android:layout_marginTop="0dp"
-                android:gravity="center"
-                android:text="Parameters:" />
-
-            <ImageView style="@style/VerticalSolidLineSeparator" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/parameter_block_height">
+            <TableRow
+                android:minHeight="@dimen/parameter_color_min_height"
+                android:gravity="center_vertical">
 
                 <TextView
                     style="@style/NormalListText"
-                    android:text="Set the Zoom of the figure" />
+                    android:text="@string/red_color_parameter" />
 
                 <EditText
-                    android:id="@+id/et_zoom"
-                    android:layout_width="@dimen/parameter_edit_text_width"
-                    android:layout_marginRight="@dimen/parameter_list_item_margin_right"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:text="250"
-                    android:gravity="center_horizontal"
-                    android:inputType="number"/>
+                    android:id="@+id/red_parameter_value"
+                    style="@style/Parameter8BitsEditText" />
 
-            </RelativeLayout>
+                <View style="@style/VerticalSolidLineColorSeparator" />
 
-            <ImageView style="@style/VerticalDottedLineSeparator" />
+                <SeekBar
+                    android:id="@+id/red_parameter_seekbar"
+                    style="@style/ParameterColoredSeekBar"
+                    android:progress="@string/color_default_progress" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/parameter_block_height">
+            </TableRow>
+
+            <ImageView style="@style/HorizontalDottedLineSeparator" />
+
+            <TableRow
+                android:minHeight="@dimen/parameter_color_min_height"
+                android:gravity="center_vertical">
 
                 <TextView
                     style="@style/NormalListText"
-                    android:text="Choose a magic color" />
+                    android:text="@string/green_color_parameter" />
 
                 <EditText
-                    android:id="@+id/et_magic_color"
-                    android:layout_width="@dimen/parameter_edit_text_width"
-                    android:layout_marginRight="@dimen/parameter_list_item_margin_right"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:text="4"
-                    android:gravity="center_horizontal"
-                    android:inputType="number"/>
+                    android:id="@+id/green_parameter_value"
+                    style="@style/Parameter8BitsEditText" />
 
-            </RelativeLayout>
+                <View style="@style/VerticalSolidLineColorSeparator" />
 
-            <ImageView style="@style/VerticalDottedLineSeparator" />
+                <SeekBar
+                    android:id="@+id/green_parameter_seekbar"
+                    style="@style/ParameterColoredSeekBar"
+                    android:progress="@string/color_default_progress" />
 
-            <TextView
-                style="@style/SmallTitle"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:textSize="18sp"
-                android:gravity="bottom|center"
-                android:text="@string/color_title_parameter" />
+            </TableRow>
 
-            <ImageView style="@style/VerticalSolidLineSeparator" />
+            <ImageView style="@style/HorizontalDottedLineSeparator" />
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            <TableRow
+                android:minHeight="@dimen/parameter_color_min_height"
+                android:gravity="center_vertical">
 
-                <TableRow
-                    android:minHeight="@dimen/parameter_color_min_height"
-                    android:gravity="center_vertical">
+                <TextView
+                    style="@style/NormalListText"
+                    android:text="@string/blue_color_parameter" />
 
-                    <TextView
-                        style="@style/NormalListText"
-                        android:text="@string/red_color_parameter" />
+                <EditText
+                    android:id="@+id/blue_parameter_value"
+                    style="@style/Parameter8BitsEditText" />
 
-                    <SeekBar style="@style/ParameterColoredSeekBar" />
+                <View style="@style/VerticalSolidLineColorSeparator" />
 
-                </TableRow>
+                <SeekBar
+                    android:id="@+id/blue_parameter_seekbar"
+                    style="@style/ParameterColoredSeekBar"
+                    android:progress="@string/color_default_progress" />
 
-                <TableRow
-                    android:minHeight="@dimen/parameter_color_min_height"
-                    android:gravity="center_vertical">
+            </TableRow>
 
-                    <TextView
-                        style="@style/NormalListText"
-                        android:text="@string/green_color_parameter" />
+            <ImageView style="@style/HorizontalDottedLineSeparator" />
 
-                    <SeekBar style="@style/ParameterColoredSeekBar" />
+        </TableLayout>
 
-                </TableRow>
+        <Button
+            android:id="@+id/btn_draw_mandelbrot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/button_draw_mandelbrot" />
 
-                <TableRow
-                    android:minHeight="@dimen/parameter_color_min_height"
-                    android:gravity="center_vertical">
-
-                    <TextView
-                        style="@style/NormalListText"
-                        android:text="@string/blue_color_parameter" />
-
-                    <SeekBar style="@style/ParameterColoredSeekBar" />
-
-                </TableRow>
-
-            </TableLayout>
-
-            <Button
-                android:id="@+id/btn_draw_mandelbrot"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/button_draw_mandelbrot" />
-
-        </LinearLayout>
-
-    </ScrollView>
+    </LinearLayout>
 
 </RelativeLayout>

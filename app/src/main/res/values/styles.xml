@@ -35,24 +35,42 @@
         <item name="android:textSize">15sp</item>
     </style>
 
-    <style name="VerticalDottedLineSeparator">
+    <style name="Parameter8BitsEditText">
+        <item name="android:layout_width">@dimen/parameter_edit_text_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/parameters_color_edit_text_margin_left_right</item>
+        <item name="android:layout_marginRight">@dimen/parameters_color_edit_text_margin_left_right</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:inputType">number</item>
+    </style>
+
+    <style name="HorizontalDottedLineSeparator">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/line_separator_height</item>
         <item name="android:layerType">software</item>
         <item name="android:src">@drawable/dotted_line</item>
     </style>
 
-    <style name="VerticalSolidLineSeparator">
+    <style name="HorizontalSolidLineSeparator">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/line_separator_height</item>
         <item name="android:layerType">software</item>
         <item name="android:src">@drawable/solid_line</item>
     </style>
 
+    <style name="VerticalSolidLineColorSeparator">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/vertical_line_separator_margin</item>
+        <item name="android:layout_marginBottom">@dimen/vertical_line_separator_margin</item>
+        <item name="android:layout_marginLeft">@dimen/vertical_line_separator_margin</item>
+        <item name="android:layout_marginRight">@dimen/vertical_line_separator_margin</item>
+        <item name="android:background">#525252</item>
+    </style>
+
     <style name="ParameterColoredSeekBar">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">@dimen/parameter_color_min_seekbar_margin_left</item>
         <item name="android:layout_weight">1</item>
     </style>
 

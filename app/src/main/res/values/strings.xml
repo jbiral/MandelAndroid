@@ -10,12 +10,12 @@
     <string name="app_instructions_text">This App is simple as a Mandelbrot set is nice! Select some parameters below and click on Generate to create an amazing Mandelbrot set!</string>
     <string name="button_draw_mandelbrot">Draw the Mandelbrot set!</string>
 
-    <string name="default_zoom_parameter">Red</string>
-
+    <string name="default_zoom_parameter">250</string>
     <string name="color_title_parameter">Colors:</string>
-    <string name="red_color_parameter">Red</string>
-    <string name="green_color_parameter">Green</string>
-    <string name="blue_color_parameter">Blue</string>
+    <string name="red_color_parameter">Red:</string>
+    <string name="green_color_parameter">Green:</string>
+    <string name="blue_color_parameter">Blue:</string>
+    <string name="color_default_progress">20</string>
 
     <!-- Mandelbrot Drawing -->
     <string name="loading_screen">Please wait while the Mandelbrot set is being drawn&#8230;</string>

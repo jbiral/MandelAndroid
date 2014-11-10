@@ -21,6 +21,7 @@ import com.julienbiral.mandelandroid.util.JsonParser;
 public class MandelbrotActivity extends ActionBarActivity {
 
     public final static String DRAWING_PARAMETERS = "_DRAWING_PARAMETERS_";
+    public final static int MAX_ITERATIONS = 570;
 
     TextView tvLoadingScreen;
     ProgressBar pbLoadingScreen;
@@ -85,9 +86,11 @@ public class MandelbrotActivity extends ActionBarActivity {
         @Override
         protected Bitmap doInBackground(Void... voids) {
 
-            final double ZOOM = params.zoom;
-            final int MAX_ITER = 570;
-            final int MAGIC_COLOR = params.color;
+            final double zoom = params.zoom;
+            final double red = params.getRedColor();
+            final double green = params.getGreenColor();
+            final double blue = params.getBlueColor();
+
             Bitmap mBitmap = null;
 
             if (mBitmap == null) {
@@ -106,9 +109,9 @@ public class MandelbrotActivity extends ActionBarActivity {
                     for (int x = 0; x < width; x++) {
                         zx = zy = 0;
                         // x-y are taken centered
-                        cX = (x - width / 2) / ZOOM;
-                        cY = (y - height / 2) / ZOOM;
-                        int iter = MAX_ITER;
+                        cX = (x - width / 2) / zoom;
+                        cY = (y - height / 2) / zoom;
+                        int iter = MAX_ITERATIONS;
 
                         // To have a bounded serie, the module should be lower than 2:
                         while (zx * zx + zy * zy < 4 && iter > 0) {
@@ -118,7 +121,9 @@ public class MandelbrotActivity extends ActionBarActivity {
                             iter--;
                         }
 
-                        pixels[(y * width + x)] = Color.rgb(30, iter << MAGIC_COLOR, 30);
+                        pixels[(y * width + x)] = Color.rgb((int) (iter * red),
+                                                            (int) (iter * green),
+                                                            (int) (iter * blue));
 
                         currentPercent = (y * width + x) * 100 / nbIter;
                         if (previousPercent < currentPercent) {

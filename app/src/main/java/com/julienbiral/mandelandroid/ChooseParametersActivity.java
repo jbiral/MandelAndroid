@@ -86,7 +86,7 @@ public class ChooseParametersActivity extends Activity {
         params.setRGBColor(redBar.getProgress() * PROGRESS_TO_COLOR_COEFFICIENT,
                            greenBar.getProgress() * PROGRESS_TO_COLOR_COEFFICIENT,
                            blueBar.getProgress() * PROGRESS_TO_COLOR_COEFFICIENT);
-        Log.d("params", params.toString());
+
         return JsonParser.createJson(params);
     }
 }

@@ -43,7 +43,11 @@ public class DrawingParameters {
     /** Methods */
     @Override
     public String toString() {
-        return "DrawingParameters [Zoom = " + this.zoom
-                + ", Color = " + this.color.toString() + "]";
+        return "DrawingParameters {Zoom = " + zoom
+                + ", Color = ["
+                + "R: " + color[RED]
+                + "G: " + color[GREEN]
+                + "B: " + color[BLUE]
+                + "] }";
     }
 }
